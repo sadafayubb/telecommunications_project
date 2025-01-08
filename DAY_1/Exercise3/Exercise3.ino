@@ -1,6 +1,6 @@
 
-const uint8_t pinButton = 5;
-const uint8_t pinLED = 4;
+const uint8_t pinButton = 6;
+const uint8_t pinLED = 7;
 
 
 bool ON = false;
