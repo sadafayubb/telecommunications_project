@@ -1,0 +1,170 @@
+\doxysection{ex12.\+ino File Reference}
+\hypertarget{ex12_8ino}{}\label{ex12_8ino}\index{ex12.ino@{ex12.ino}}
+{\ttfamily \#include $<$Liquid\+Crystal.\+h$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ex12_8ino_a3e4545636cef77da4ddab18e3d233101}{LEN}}(x)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Liquid\+Crystal \mbox{\hyperlink{ex12_8ino_af97afdf00af0e116e9b5957f6a470fc2}{lcd}} (12, 11, 5, 4, 3, 2)
+\item 
+void \mbox{\hyperlink{ex12_8ino_a8ee55ac8993fb3160edf3668cec2fba4}{win}} ()
+\item 
+void \mbox{\hyperlink{ex12_8ino_a0881a6c2c2ceb032b70ddb87c6b9de6e}{lose}} ()
+\item 
+void \mbox{\hyperlink{ex12_8ino_ae348b085566bb9aeaed85842d57a026d}{all\+LEDs\+Off}} ()
+\item 
+void \mbox{\hyperlink{ex12_8ino_a4e96c3172a05eaf9f989eaea9db11fbe}{LCD\+\_\+print\+\_\+pin}} (int pin)
+\item 
+void \mbox{\hyperlink{ex12_8ino_ae8b4af113c86535db029d2f7c2784b7e}{LCD\+\_\+print\+\_\+wins}} ()
+\item 
+void \mbox{\hyperlink{ex12_8ino_a4fc01d736fe50cf5b977f755b675f11d}{setup}} ()
+\item 
+void \mbox{\hyperlink{ex12_8ino_afe461d27b9c48d5921c00d521181f12f}{loop}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const uint8\+\_\+t \mbox{\hyperlink{ex12_8ino_a6de548440a473986b1c9d7a7aab8484e}{pin\+Button}} = 13
+\item 
+const uint8\+\_\+t \mbox{\hyperlink{ex12_8ino_a5995e288a1ffdf4ade4f77e2989021a6}{pins}} \mbox{[}5\mbox{]} = \{6, 7, 8, 9, 10\}
+\item 
+bool \mbox{\hyperlink{ex12_8ino_a132ba96da5ba28448b61e42c019312a9}{pressed}} = false
+\item 
+int \mbox{\hyperlink{ex12_8ino_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}} = 0
+\item 
+unsigned long \mbox{\hyperlink{ex12_8ino_a86027ad9c9159f02624d136fb63364fe}{previous\+Millis}} = 0
+\item 
+unsigned long \mbox{\hyperlink{ex12_8ino_ae0cbaf532dc7817c544d33554786336b}{current\+Millis}} = 0
+\item 
+unsigned long \mbox{\hyperlink{ex12_8ino_abfb64103a4d54ec236f051b50eac3b56}{flashing\+Speed}} = 500
+\item 
+int \mbox{\hyperlink{ex12_8ino_aa950e28b2a838867c8924de483f979f3}{wins}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{ex12_8ino_a3e4545636cef77da4ddab18e3d233101}\index{ex12.ino@{ex12.ino}!LEN@{LEN}}
+\index{LEN@{LEN}!ex12.ino@{ex12.ino}}
+\doxysubsubsection{\texorpdfstring{LEN}{LEN}}
+{\footnotesize\ttfamily \label{ex12_8ino_a3e4545636cef77da4ddab18e3d233101} 
+\#define LEN(\begin{DoxyParamCaption}\item[{}]{x}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(\textcolor{keyword}{sizeof}(x)\ /\ \textcolor{keyword}{sizeof}((x)[0]))}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{ex12_8ino_ae348b085566bb9aeaed85842d57a026d}\index{ex12.ino@{ex12.ino}!allLEDsOff@{allLEDsOff}}
+\index{allLEDsOff@{allLEDsOff}!ex12.ino@{ex12.ino}}
+\doxysubsubsection{\texorpdfstring{allLEDsOff()}{allLEDsOff()}}
+{\footnotesize\ttfamily \label{ex12_8ino_ae348b085566bb9aeaed85842d57a026d} 
+void all\+LEDs\+Off (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Turns off all LEDs.\Hypertarget{ex12_8ino_af97afdf00af0e116e9b5957f6a470fc2}\index{ex12.ino@{ex12.ino}!lcd@{lcd}}
+\index{lcd@{lcd}!ex12.ino@{ex12.ino}}
+\doxysubsubsection{\texorpdfstring{lcd()}{lcd()}}
+{\footnotesize\ttfamily \label{ex12_8ino_af97afdf00af0e116e9b5957f6a470fc2} 
+Liquid\+Crystal lcd (\begin{DoxyParamCaption}\item[{12}]{}{, }\item[{11}]{}{, }\item[{5}]{}{, }\item[{4}]{}{, }\item[{3}]{}{, }\item[{2}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{ex12_8ino_a4e96c3172a05eaf9f989eaea9db11fbe}\index{ex12.ino@{ex12.ino}!LCD\_print\_pin@{LCD\_print\_pin}}
+\index{LCD\_print\_pin@{LCD\_print\_pin}!ex12.ino@{ex12.ino}}
+\doxysubsubsection{\texorpdfstring{LCD\_print\_pin()}{LCD\_print\_pin()}}
+{\footnotesize\ttfamily \label{ex12_8ino_a4e96c3172a05eaf9f989eaea9db11fbe} 
+void LCD\+\_\+print\+\_\+pin (\begin{DoxyParamCaption}\item[{int}]{pin}{}\end{DoxyParamCaption})}
+
+prints "{}\+Light number\+: $<$pin$>$"{} to the LCD screen.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & (int)\+: The LED number to be displayed. ~\newline
+\\
+\hline
+\end{DoxyParams}
+\Hypertarget{ex12_8ino_ae8b4af113c86535db029d2f7c2784b7e}\index{ex12.ino@{ex12.ino}!LCD\_print\_wins@{LCD\_print\_wins}}
+\index{LCD\_print\_wins@{LCD\_print\_wins}!ex12.ino@{ex12.ino}}
+\doxysubsubsection{\texorpdfstring{LCD\_print\_wins()}{LCD\_print\_wins()}}
+{\footnotesize\ttfamily \label{ex12_8ino_ae8b4af113c86535db029d2f7c2784b7e} 
+void LCD\+\_\+print\+\_\+wins (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Prints the number of wins that the player has to the LCD screen.\Hypertarget{ex12_8ino_afe461d27b9c48d5921c00d521181f12f}\index{ex12.ino@{ex12.ino}!loop@{loop}}
+\index{loop@{loop}!ex12.ino@{ex12.ino}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily \label{ex12_8ino_afe461d27b9c48d5921c00d521181f12f} 
+void loop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+This is the core logic of the game. It keeps track of how many times the palyer has won, which is achieved by pressing the button when LED 3 is lit. The game become sharder when the number of wins exceeds 8 and resets when the number of wins is 10.\Hypertarget{ex12_8ino_a0881a6c2c2ceb032b70ddb87c6b9de6e}\index{ex12.ino@{ex12.ino}!lose@{lose}}
+\index{lose@{lose}!ex12.ino@{ex12.ino}}
+\doxysubsubsection{\texorpdfstring{lose()}{lose()}}
+{\footnotesize\ttfamily \label{ex12_8ino_a0881a6c2c2ceb032b70ddb87c6b9de6e} 
+void lose (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Is run each time the player loses (gets the wrong LED) the game. It turns of all LEDs and print wincount to LCD screen.\Hypertarget{ex12_8ino_a4fc01d736fe50cf5b977f755b675f11d}\index{ex12.ino@{ex12.ino}!setup@{setup}}
+\index{setup@{setup}!ex12.ino@{ex12.ino}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily \label{ex12_8ino_a4fc01d736fe50cf5b977f755b675f11d} 
+void setup (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+The \doxylink{ex12_8ino_a4fc01d736fe50cf5b977f755b675f11d}{setup()} function initializes the LCD screen, the LED pins, and sets a random random seed using pin A0.\Hypertarget{ex12_8ino_a8ee55ac8993fb3160edf3668cec2fba4}\index{ex12.ino@{ex12.ino}!win@{win}}
+\index{win@{win}!ex12.ino@{ex12.ino}}
+\doxysubsubsection{\texorpdfstring{win()}{win()}}
+{\footnotesize\ttfamily \label{ex12_8ino_a8ee55ac8993fb3160edf3668cec2fba4} 
+void win (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Is run each time the player wins the game. It make the lights flash in a special way, and prins the win count to the LCD screen.
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{ex12_8ino_ad43c3812e6d13e0518d9f8b8f463ffcf}\index{ex12.ino@{ex12.ino}!count@{count}}
+\index{count@{count}!ex12.ino@{ex12.ino}}
+\doxysubsubsection{\texorpdfstring{count}{count}}
+{\footnotesize\ttfamily \label{ex12_8ino_ad43c3812e6d13e0518d9f8b8f463ffcf} 
+int count = 0}
+
+\Hypertarget{ex12_8ino_ae0cbaf532dc7817c544d33554786336b}\index{ex12.ino@{ex12.ino}!currentMillis@{currentMillis}}
+\index{currentMillis@{currentMillis}!ex12.ino@{ex12.ino}}
+\doxysubsubsection{\texorpdfstring{currentMillis}{currentMillis}}
+{\footnotesize\ttfamily \label{ex12_8ino_ae0cbaf532dc7817c544d33554786336b} 
+unsigned long current\+Millis = 0}
+
+\Hypertarget{ex12_8ino_abfb64103a4d54ec236f051b50eac3b56}\index{ex12.ino@{ex12.ino}!flashingSpeed@{flashingSpeed}}
+\index{flashingSpeed@{flashingSpeed}!ex12.ino@{ex12.ino}}
+\doxysubsubsection{\texorpdfstring{flashingSpeed}{flashingSpeed}}
+{\footnotesize\ttfamily \label{ex12_8ino_abfb64103a4d54ec236f051b50eac3b56} 
+unsigned long flashing\+Speed = 500}
+
+\Hypertarget{ex12_8ino_a6de548440a473986b1c9d7a7aab8484e}\index{ex12.ino@{ex12.ino}!pinButton@{pinButton}}
+\index{pinButton@{pinButton}!ex12.ino@{ex12.ino}}
+\doxysubsubsection{\texorpdfstring{pinButton}{pinButton}}
+{\footnotesize\ttfamily \label{ex12_8ino_a6de548440a473986b1c9d7a7aab8484e} 
+const uint8\+\_\+t pin\+Button = 13}
+
+\Hypertarget{ex12_8ino_a5995e288a1ffdf4ade4f77e2989021a6}\index{ex12.ino@{ex12.ino}!pins@{pins}}
+\index{pins@{pins}!ex12.ino@{ex12.ino}}
+\doxysubsubsection{\texorpdfstring{pins}{pins}}
+{\footnotesize\ttfamily \label{ex12_8ino_a5995e288a1ffdf4ade4f77e2989021a6} 
+const uint8\+\_\+t pins\mbox{[}5\mbox{]} = \{6, 7, 8, 9, 10\}}
+
+\Hypertarget{ex12_8ino_a132ba96da5ba28448b61e42c019312a9}\index{ex12.ino@{ex12.ino}!pressed@{pressed}}
+\index{pressed@{pressed}!ex12.ino@{ex12.ino}}
+\doxysubsubsection{\texorpdfstring{pressed}{pressed}}
+{\footnotesize\ttfamily \label{ex12_8ino_a132ba96da5ba28448b61e42c019312a9} 
+bool pressed = false}
+
+\Hypertarget{ex12_8ino_a86027ad9c9159f02624d136fb63364fe}\index{ex12.ino@{ex12.ino}!previousMillis@{previousMillis}}
+\index{previousMillis@{previousMillis}!ex12.ino@{ex12.ino}}
+\doxysubsubsection{\texorpdfstring{previousMillis}{previousMillis}}
+{\footnotesize\ttfamily \label{ex12_8ino_a86027ad9c9159f02624d136fb63364fe} 
+unsigned long previous\+Millis = 0}
+
+\Hypertarget{ex12_8ino_aa950e28b2a838867c8924de483f979f3}\index{ex12.ino@{ex12.ino}!wins@{wins}}
+\index{wins@{wins}!ex12.ino@{ex12.ino}}
+\doxysubsubsection{\texorpdfstring{wins}{wins}}
+{\footnotesize\ttfamily \label{ex12_8ino_aa950e28b2a838867c8924de483f979f3} 
+int wins = 0}
+

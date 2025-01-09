@@ -15,6 +15,11 @@ int wins = 0;
 LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
 
 void win() {
+
+  /**
+    * @brief Is run each time the player wins the game. It make the lights flash in a special way, and prins the win count to the LCD screen.
+    */
+
   int speed = 100;
   wins += 1;
   flashingSpeed = (flashingSpeed * 4.0) / 5.0;
@@ -32,18 +37,33 @@ void win() {
 }
 
 void lose() {
+  /**
+  * @brief Is run each time the player loses (gets the wrong LED) the game. It turns of all LEDs and print wincount to LCD screen.
+  */
   allLEDsOff();
   delay(1000);
   LCD_print_wins();
 }
 
 void allLEDsOff() {
+
+  /**
+    * @brief Turns off all LEDs.
+    */
+
   for (int i = 0; i < LEN(pins); i++) {
     digitalWrite(pins[i], LOW);
   }
 }
 
 void LCD_print_pin(int pin) {
+
+  /**
+  * @brief prints "Light number: <pin>" to the LCD screen.
+  *
+  * @param pin (int): The LED number to be displayed.  
+  */
+
   lcd.setCursor(0, 0);
   lcd.print("Light number:   "); // Clear the rest of the line
   lcd.setCursor(0, 0);
@@ -54,6 +74,11 @@ void LCD_print_pin(int pin) {
 }
 
 void LCD_print_wins() {
+
+  /**
+  * @brief Prints the number of wins that the player has to the LCD screen.
+  */
+
   lcd.setCursor(0, 0);
   lcd.print("Wins:          "); // Clear the rest of the line
   lcd.setCursor(0, 0);
@@ -64,6 +89,9 @@ void LCD_print_wins() {
 }
 
 void setup() {
+  /**
+  * @brief The setup() function initializes the LCD screen, the LED pins, and sets a random random seed using pin A0.
+  */
   Serial.begin(115200);
   pinMode(pinButton, INPUT_PULLUP);
 
@@ -83,6 +111,11 @@ void setup() {
 }
 
 void loop() {
+
+  /**
+  * @brief This is the core logic of the game. It keeps track of how many times the palyer has won, which is achieved by pressing the button when LED 3 is lit. The game become sharder when the number of wins exceeds 8 and resets when the number of wins is 10.
+  */
+
   // We can use millis() to create a delay that does not interfere with the outer loop.
   // This ensure that we can still check the button press.
   currentMillis = millis();
